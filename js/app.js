@@ -109,7 +109,7 @@ Player.prototype.handleInput = function (key) {
         this.x -= 100 ;
         break;
         case 'right' :
-        this.x += 103 ;
+        this.x += 100 ;
         break;
     }
         if (this.y < 0) {
