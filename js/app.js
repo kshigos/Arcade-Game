@@ -56,13 +56,13 @@ Player.prototype.update = function(dt) {
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.image), this.x, this.y);
-    player.scoreCount();
+    this.scoreCount();
 };
 //score.
 Player.prototype.scoreCount = function() {
     ctx.font="30px Arial";
     ctx.fillStyle = 'red';
-    ctx.fillText('SCORE : '+ player.score, 0, 40);
+    ctx.fillText('SCORE : '+ this.score, 0, 40);
 };
 //text to show if player wins or collision occurs.
 Player.prototype.showText = function() {
@@ -126,9 +126,9 @@ Player.prototype.handleInput = function (key) {
     }
         if (this.y <= 0) {
         //when player wins show massage and restart the game.
-        player.showText();
-        player.score += 10 ;
-        player.reset();
+        this.showText();
+        this.score += 10 ;
+        this.reset();
     }
 
     //check for collision
